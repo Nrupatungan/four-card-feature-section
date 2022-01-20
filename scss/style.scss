@@ -1,1 +1,172 @@
 @import "globals";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .intro{
+        display: flex;
+        flex-direction: column;
+    }
+    .supervisor{
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        h3,p{
+            justify-self: flex-start;
+            align-self: flex-start;
+        }
+        img{
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+    }
+    .team-builder{
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        h3,p{
+            justify-self: flex-start;
+            align-self: flex-start;
+        }
+        img{
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+    }
+    .karma{
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        h3,p{
+            justify-self: flex-start;
+            align-self: flex-start;
+        }
+        img{
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+    }
+    .calculator{
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        h3,p{
+            justify-self: flex-start;
+            align-self: flex-start;
+        }
+        img{
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+    }
+}
+
+/******Screen Layouts*****/
+@media screen and (min-width:375px){
+    .container{
+        .supervisor,.team-builder,.karma,.calculator{
+            width: 315px;
+            height: 228px;
+        }
+    }
+}
+
+@media screen and (min-width:615px){
+    .container{
+        
+        .intro{
+           p{
+               width: 555px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:715px){
+    body{
+        .container{
+            position: relative;
+            .intro{
+                order: -3;
+               p{
+                   width: 555px;
+                }
+            }
+            .supervisor{
+                justify-self: flex-start;
+                align-self:flex-start;
+            }
+            .team-builder{
+                order: -1;
+            }
+            .calculator{
+                justify-self: flex-end;
+                align-self: flex-end;
+                position: absolute;
+                top: 44.95%;
+            }
+            .karma{
+               order: 1;
+               margin-bottom: 90px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1060px){
+
+    body{
+            
+        .container{
+            .team-builder{
+                position: absolute;
+                top: 27%;
+            }
+
+            .karma{
+            transform: translateY(10%);
+            position: static;
+            }
+            .supervisor{
+                transform: translateY(66.5%);
+            position: static;
+            }
+    }
+
+}
+
+}
+@media screen and (min-width:1061px) {
+    body{
+        position: fixed;
+        .container{
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -220%);
+            .supervisor{
+                position: absolute;
+                transform: translate(-70%,155%);
+            }
+            .calculator{
+                position: absolute;
+                transform: translate(70%, 102%);
+            }
+            .team-builder{
+                position: absolute;
+                transform: translate(0%, 60%);
+            }
+            .karma{
+                position: absolute;
+                transform: translate(0%,225%);
+            }
+        }
+    }
+    footer{
+        p{
+            visibility: hidden;
+            display: none;
+        }
+    }
+}
